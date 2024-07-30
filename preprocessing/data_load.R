@@ -46,97 +46,97 @@ image_dir <- "/PHShome/je637/Visium/images/"
 
 # Loading in the data
 #-------
-slide35_panel1 <- Load10X_Spatial(data.dir = "/data/humgen/klengellab/Visium/data/slide_35/200522_NS500668_0814_AHGHTHBGXF/S3__6-3-Slide-3-35-panel-1/outs",
+slide35_panel1 <- Load10X_Spatial(data.dir = "/data/klengellab/Visium/data/slide_35/200522_NS500668_0814_AHGHTHBGXF/S3__6-3-Slide-3-35-panel-1/outs",
                                   filename = "filtered_feature_bc_matrix.h5",
                                   assay = "Spatial",
                                   slice = "slide35_panel_1",
                                   filter.matrix = TRUE)
 
-slide35_panel2 <- Load10X_Spatial(data.dir = "/data/humgen/klengellab/Visium/data/slide_35/200522_NS500668_0814_AHGHTHBGXF/S3__1-2-Slide-3-35-panel-2/outs",
+slide35_panel2 <- Load10X_Spatial(data.dir = "/data/klengellab/Visium/data/slide_35/200522_NS500668_0814_AHGHTHBGXF/S3__1-2-Slide-3-35-panel-2/outs",
                                   filename = "filtered_feature_bc_matrix.h5",
                                   assay = "Spatial",
                                   slice = "slide35_panel_2",
                                   filter.matrix = TRUE)
 
-slide35_panel3 <- Load10X_Spatial(data.dir = "/data/humgen/klengellab/Visium/data/slide_35/200522_NS500668_0814_AHGHTHBGXF/S3__5-4-Slide-3-35-panel-3/outs",
+slide35_panel3 <- Load10X_Spatial(data.dir = "/data/klengellab/Visium/data/slide_35/200522_NS500668_0814_AHGHTHBGXF/S3__5-4-Slide-3-35-panel-3/outs",
                                   filename = "filtered_feature_bc_matrix.h5",
                                   assay = "Spatial",
                                   slice = "slide35_panel_3",
                                   filter.matrix = TRUE)
 
-slide35_panel4 <- Load10X_Spatial(data.dir = "/data/humgen/klengellab/Visium/data/slide_35/200522_NS500668_0814_AHGHTHBGXF/S3__2-2-Slide-3-35-panel-4/outs",
+slide35_panel4 <- Load10X_Spatial(data.dir = "/data/klengellab/Visium/data/slide_35/200522_NS500668_0814_AHGHTHBGXF/S3__2-2-Slide-3-35-panel-4/outs",
                                   filename = "filtered_feature_bc_matrix.h5",
                                   assay = "Spatial",
                                   slice = "slide35_panel_4",
                                   filter.matrix = TRUE)
 
-slide61_panel1 <- Load10X_Spatial(data.dir = "/data/humgen/klengellab/Visium/data/slide_61/200521_NS500668_0813_AHGHJLBGXF/S3__4-1-Slide-1-61-panel-1/outs",
+slide61_panel1 <- Load10X_Spatial(data.dir = "/data/klengellab/Visium/data/slide_61/200521_NS500668_0813_AHGHJLBGXF/S3__4-1-Slide-1-61-panel-1/outs",
                                   filename = "filtered_feature_bc_matrix.h5",
                                   assay = "Spatial",
                                   slice = "slide61_panel_1",
                                   filter.matrix = TRUE)
 
-slide61_panel2 <- Load10X_Spatial(data.dir = "/data/humgen/klengellab/Visium/data/slide_61/200521_NS500668_0813_AHGHJLBGXF/S3__1-1-Slide-1-61-panel-2/outs",
+slide61_panel2 <- Load10X_Spatial(data.dir = "/data/klengellab/Visium/data/slide_61/200521_NS500668_0813_AHGHJLBGXF/S3__1-1-Slide-1-61-panel-2/outs",
                                   filename = "filtered_feature_bc_matrix.h5",
                                   assay = "Spatial",
                                   slice = "slide61_panel_2",
                                   filter.matrix = TRUE)
 
-slide61_panel3 <- Load10X_Spatial(data.dir = "/data/humgen/klengellab/Visium/data/slide_61/200521_NS500668_0813_AHGHJLBGXF/S3__6-2-Slide-1-61-panel-3/outs",
+slide61_panel3 <- Load10X_Spatial(data.dir = "/data/klengellab/Visium/data/slide_61/200521_NS500668_0813_AHGHJLBGXF/S3__6-2-Slide-1-61-panel-3/outs",
                                   filename = "filtered_feature_bc_matrix.h5",
                                   assay = "Spatial",
                                   slice = "slide61_panel_3",
                                   filter.matrix = TRUE)
 
-slide61_panel4 <- Load10X_Spatial(data.dir = "/data/humgen/klengellab/Visium/data/slide_61/200521_NS500668_0813_AHGHJLBGXF/S3__2-1-Slide-1-61-panel-4/outs",
+slide61_panel4 <- Load10X_Spatial(data.dir = "/data/klengellab/Visium/data/slide_61/200521_NS500668_0813_AHGHJLBGXF/S3__2-1-Slide-1-61-panel-4/outs",
                                   filename = "filtered_feature_bc_matrix.h5",
                                   assay = "Spatial",
                                   slice = "slide61_panel_4",
                                   filter.matrix = TRUE)
 
-slide69_panel1 <- Load10X_Spatial(data.dir = "/data/humgen/klengellab/Visium/data/slide_69/200525_NS500668_0815_AHHCLVBGXF/S3__4-3-Slide-2-069-panel-1/outs",
+slide69_panel1 <- Load10X_Spatial(data.dir = "/data/klengellab/Visium/data/slide_69/200525_NS500668_0815_AHHCLVBGXF/S3__4-3-Slide-2-069-panel-1/outs",
                                   filename = "filtered_feature_bc_matrix.h5",
                                   assay = "Spatial",
                                   slice = "slide69_panel_1",
                                   filter.matrix = TRUE)
 
-slide69_panel2 <- Load10X_Spatial(data.dir = "/data/humgen/klengellab/Visium/data/slide_69/200525_NS500668_0815_AHHCLVBGXF/S3__1-2-Slide-2-069-panel-2/outs",
+slide69_panel2 <- Load10X_Spatial(data.dir = "/data/klengellab/Visium/data/slide_69/200525_NS500668_0815_AHHCLVBGXF/S3__1-2-Slide-2-069-panel-2/outs",
                                   filename = "filtered_feature_bc_matrix.h5",
                                   assay = "Spatial",
                                   slice = "slide69_panel_2",
                                   filter.matrix = TRUE)
 
-slide69_panel3 <- Load10X_Spatial(data.dir = "/data/humgen/klengellab/Visium/data/slide_69/200525_NS500668_0815_AHHCLVBGXF/S3__5-4-Slide-2-069-panel-3/outs",
+slide69_panel3 <- Load10X_Spatial(data.dir = "/data/klengellab/Visium/data/slide_69/200525_NS500668_0815_AHHCLVBGXF/S3__5-4-Slide-2-069-panel-3/outs",
                                   filename = "filtered_feature_bc_matrix.h5",
                                   assay = "Spatial",
                                   slice = "slide69_panel_3",
                                   filter.matrix = TRUE)
 
-slide69_panel4 <- Load10X_Spatial(data.dir = "/data/humgen/klengellab/Visium/data/slide_69/200525_NS500668_0815_AHHCLVBGXF/S3__2-2-Slide-2-069-panel-4/outs",
+slide69_panel4 <- Load10X_Spatial(data.dir = "/data/klengellab/Visium/data/slide_69/200525_NS500668_0815_AHHCLVBGXF/S3__2-2-Slide-2-069-panel-4/outs",
                                   filename = "filtered_feature_bc_matrix.h5",
                                   assay = "Spatial",
                                   slice = "slide69_panel_4",
                                   filter.matrix = TRUE)
 
-slide79_panel1 <- Load10X_Spatial(data.dir = "/data/humgen/klengellab/Visium/data/slide_79/200526_NS500668_0816_AHGJHCBGXF/S3__6-4-Slide-4-079-panel-1/outs",
+slide79_panel1 <- Load10X_Spatial(data.dir = "/data/klengellab/Visium/data/slide_79/200526_NS500668_0816_AHGJHCBGXF/S3__6-4-Slide-4-079-panel-1/outs",
                                   filename = "filtered_feature_bc_matrix.h5",
                                   assay = "Spatial",
                                   slice = "slide79_panel_1",
                                   filter.matrix = TRUE)
 
-slide79_panel2 <- Load10X_Spatial(data.dir = "/data/humgen/klengellab/Visium/data/slide_79/200526_NS500668_0816_AHGJHCBGXF/S3__1-4-Slide-4-079-panel-2/outs",
+slide79_panel2 <- Load10X_Spatial(data.dir = "/data/klengellab/Visium/data/slide_79/200526_NS500668_0816_AHGJHCBGXF/S3__1-4-Slide-4-079-panel-2/outs",
                                   filename = "filtered_feature_bc_matrix.h5",
                                   assay = "Spatial",
                                   slice = "slide79_panel_2",
                                   filter.matrix = TRUE)
 
-slide79_panel3 <- Load10X_Spatial(data.dir = "/data/humgen/klengellab/Visium/data/slide_79/200526_NS500668_0816_AHGJHCBGXF/S3__3-3-Slide-4-079-panel-3/outs",
+slide79_panel3 <- Load10X_Spatial(data.dir = "/data/klengellab/Visium/data/slide_79/200526_NS500668_0816_AHGJHCBGXF/S3__3-3-Slide-4-079-panel-3/outs",
                                   filename = "filtered_feature_bc_matrix.h5",
                                   assay = "Spatial",
                                   slice = "slide79_panel_3",
                                   filter.matrix = TRUE)
 
-slide79_panel4 <- Load10X_Spatial(data.dir = "/data/humgen/klengellab/Visium/data/slide_79/200526_NS500668_0816_AHGJHCBGXF/S3__2-4-Slide-4-079-panel-4/outs",
+slide79_panel4 <- Load10X_Spatial(data.dir = "/data/klengellab/Visium/data/slide_79/200526_NS500668_0816_AHGJHCBGXF/S3__2-4-Slide-4-079-panel-4/outs",
                                   filename = "filtered_feature_bc_matrix.h5",
                                   assay = "Spatial",
                                   slice = "slide79_panel_4",
