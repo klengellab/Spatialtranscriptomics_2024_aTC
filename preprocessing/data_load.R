@@ -202,7 +202,7 @@ dim(count_data) # 19427 46837
 # Iterate through each gene to check for detection in spots
 for (i in 1:nrow(count_data)) {
   message(i) # Print the current index
-  gene <- count_data[i, ]
+  gene <- as.data.frame(count_data[i, ])
   detected_in_spots <- apply(gene, 2, function(x) any(x > 0))
   num_detected_spots <- sum(detected_in_spots)
   
