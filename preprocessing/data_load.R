@@ -20,7 +20,28 @@ set_metadata <- function(object, ident, metadata, slide_nr) {
   object@meta.data[["slide_nr"]] <- slide_nr
   return(object)
 }
-
+# Define a function to update coordinates for a given slide panel
+update_coordinates <- function(panel, count_data, total) {
+  # Extract coordinates for the specified panel
+  coordinates <- as.data.frame(total@images[[panel]]@coordinates)
+  
+  # Get all coordinates from count_data and filter for the current panel
+  all_coordinates <- colnames(count_data)
+  slide_panel <- grepl(panel, all_coordinates)
+  selected_coordinates <- all_coordinates[slide_panel]
+  
+  # Convert selected coordinates to a data frame
+  selected_df <- as.data.frame(selected_coordinates)
+  
+  # Match the selected coordinates with the row names in the coordinates data
+  matched_indices <- match(selected_df$selected_coordinates, rownames(coordinates))
+  updated_coordinates <- coordinates[matched_indices, ]
+  
+  # Update the coordinates in the total object
+  total@images[[panel]]@coordinates <- updated_coordinates
+  
+  return(dim(updated_coordinates))
+}
 image_dir <- "/PHShome/je637/Visium/images/"
 
 # Loading in the data
@@ -226,29 +247,6 @@ total@meta.data <- total@meta.data[x,]
 
 # need to have the coordinates in the images correct with the spots in the filtered dataset
 # since I filtered out some spots
-# Define a function to update coordinates for a given slide panel
-update_coordinates <- function(panel, count_data, total) {
-  # Extract coordinates for the specified panel
-  coordinates <- as.data.frame(total@images[[panel]]@coordinates)
-  
-  # Get all coordinates from count_data and filter for the current panel
-  all_coordinates <- colnames(count_data)
-  slide_panel <- grepl(panel, all_coordinates)
-  selected_coordinates <- all_coordinates[slide_panel]
-  
-  # Convert selected coordinates to a data frame
-  selected_df <- as.data.frame(selected_coordinates)
-  
-  # Match the selected coordinates with the row names in the coordinates data
-  matched_indices <- match(selected_df$selected_coordinates, rownames(coordinates))
-  updated_coordinates <- coordinates[matched_indices, ]
-  
-  # Update the coordinates in the total object
-  total@images[[panel]]@coordinates <- updated_coordinates
-  
-  return(dim(updated_coordinates))
-}
-
 #Update coordinates for each panel
 panels <- c("slide35_panel_1", "slide35_panel_2", "slide35_panel_3", "slide35_panel_4",
             "slide61_panel_1", "slide61_panel_2", "slide61_panel_3", "slide61_panel_4",
