@@ -28,6 +28,7 @@ library(future)
 library(CellChat)
 set.seed(1234)
 
+# data paths
 data_path <- "set your path"
 output_path <- "set your path"
 functions_path <- "set your path"
