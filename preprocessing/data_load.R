@@ -1,4 +1,4 @@
-# Visium pre-processing
+# Visium pre-processing, merging the data
 
 # libaries
 library(Seurat)
