@@ -1,6 +1,5 @@
 # QC analysis and determining the number of PC's to use wherein the Hbb, Hba and Ttr genes are deleted on the broad regions
-
-# Date: 06-15-21, last update: 21-09-21
+# Additionally the first clustering is performed.
 # Joy Otten
 
 # Libaries:
