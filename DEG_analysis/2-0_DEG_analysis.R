@@ -1,7 +1,7 @@
 # Script to pseudo bulk the raw sequencinig count, we are using the non-normalised spatial counts to prevent
 # for normalising the dataset twice. We pseudo-bulk the counts per cluster and perform a differential expression
 # analysis with limma
-# By: Joy otten
+# By: Joy otten & Shu Dan
 
 
 # Libaries:
