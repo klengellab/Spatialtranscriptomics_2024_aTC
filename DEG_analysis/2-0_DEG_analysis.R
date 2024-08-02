@@ -256,8 +256,8 @@ dev.off()
 names(ICA_limma) <- layers
 names(norm_counts) <- layers
 
-saveRDS(norm_counts, paste0(workenvironment_path, "/new_count_sub_regions_raw.RDS"))
-saveRDS(ICA_limma, paste0(workenronment_path, "/new_limmaresults_regions_raw.RDS"))
+saveRDS(norm_counts, paste0(output_workenvironment, "/new_count_sub_regions_raw.RDS"))
+saveRDS(ICA_limma, paste0(output_workenvironment, "/new_limmaresults_regions_raw.RDS"))
 
 
 ######
