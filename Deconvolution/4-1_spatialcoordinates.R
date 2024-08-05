@@ -44,3 +44,22 @@ for(i in sample_name){
 pos_final <- as.data.frame(pos_final)
 
 saveRDS(pos_final, paste0(output_workenvironment, "/positions_visium.RDS"))
+
+# Preparation of the count data from the spatial data
+# Removal of MT genes ince it's influencing the cell type predictions
+x <- rownames(counts) %>% startsWith("mt-") 
+y <- which(x == TRUE)
+counts <- counts[-y,]
+total <- subset(total, features = rownames(counts))
+rm(counts)
+all_samples <- SplitObject(total, split.by = "orig.ident")
+
+counts <- list()
+for(i in names(all_samples)){
+  message(i)
+  count <- all_samples[[i]]@assays[["Spatial"]]@counts
+  counts <- append(counts, list(t(count)))
+}
+names(counts) <- names(all_samples)
+saveRDS(counts, paste0(output_workenvironment, "/counts_st.RDS"))
+
