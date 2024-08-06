@@ -77,7 +77,6 @@ covariates_df <- data.frame(
   slide_nr = metadata$slide_nr,
   region = metadata$region)
 
-data <- t(data)
 data.lm = empiricalBayesLM(data, removedCovariates = covariates_df, retainedCovariates = metadata$group)
 batch_corrected_data <- data.lm[["adjustedData"]]
 batch_corrected_data <- as.data.frame(batch_corrected_data)
