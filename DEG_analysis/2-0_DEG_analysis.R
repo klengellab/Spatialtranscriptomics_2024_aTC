@@ -370,7 +370,10 @@ for (c in layers){
   dev.off()
 }
 dev.off()
+names(ICA_limma) <- layers
+names(norm_counts) <- layers
+
+saveRDS(norm_counts, paste0(workenvironment_path, "/new_count_sub_regions_raw.RDS"))
+saveRDS(ICA_limma, paste0(workenvironment_path, "/new_limmaresults_regions_raw.RDS"))
 # The RTSNE plots show that there is more variance in sample 69.1. This might indicate that sample 69.1 is an outlier.
 # However, we decided to leave it in since if the sample would be fastly different there would have been additional clusters been present. 
-
-
