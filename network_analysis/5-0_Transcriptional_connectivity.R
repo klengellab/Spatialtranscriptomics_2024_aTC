@@ -28,7 +28,6 @@ data_path <- "set your path"
 output_path <- "set your path"
 functions_path <- "set your path"
 output_workenvironment <- "set your path"
-results_path <- output_path # need to set this for some of the WGCNA functions, might change this
 
 # Read in Data
 data <- readRDS(paste0(output_workenvironment, "/visium_normalised_entire_brain.RDS"))
