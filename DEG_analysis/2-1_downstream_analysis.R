@@ -58,41 +58,7 @@ total <- subset(total, idents = c("1-5", "8-6"), invert = TRUE) # deletion of 2 
 total <- saveRDS(total, paste0(data_path, "/total.RDS"))
 
 # Set up the environment
-source("/PHShome/je637/Visium/scripts/downstream_analysis/DE_res_0*4_functions.R")
-lmp <- function (modelobject) {
-  if (class(modelobject) != "lm") stop("Not an object of class 'lm' ")
-  f <- summary(modelobject)$fstatistic
-  p <- pf(f[1],f[2],f[3],lower.tail=F)
-  attributes(p) <- NULL
-  return(p)
-}
-gene_boxplot_avg <- function(count, layer, gene, group){
-  
-  # gene_boxplot: plot box plot of a gene of a specific layer across all samples
-  # Parameters:   
-  ###==============================================================================================###
-  # count: DataFrame. Bulk layer count of all layers across all samples (column names: sample name + layer)
-  # layer: string. layer of interest
-  # gene: string. Name of the gene interested in plotting
-  
-  #layer_count <- count %>% dplyr::select(matches(paste(layer, "_", sep = "")))
-  gene_count <- count[gene,]
-  gene_count <- cbind(log(t(gene_count)), group)
-  colnames(gene_count) <- c("c","g")
-  # p <- boxplot(layer_count[gene,:]~group)
-  gene_count <- as.data.frame(gene_count)
-  
-  ggplot(gene_count, aes(x = as.factor(g), y = c)) + 
-    geom_boxplot() +
-    theme_classic() +
-    geom_dotplot(binaxis = 'y', stackdir = "center", dotsize = 0.5) + 
-    stat_summary(fun=mean, geom="point", shape=20, size=3, color="red", fill="red") +
-    stat_summary(fun=mean, colour="red", geom="text", 
-                 vjust=-0.7, aes( label=round(..y.., digits=3))) +
-    theme(text = element_text(size = 15)) +
-    labs(x = "Group", y = "Log(normalized count)", title = paste(gene,layer,sep = " ")) + 
-    scale_x_discrete(labels= c("CTRL", "FC"))
-}
+source(paste0(functions_path, "General_functions.R"))
 
 # Data
 sample_name <- c("35.1", "35.2", "35.3", "35.4", "61.1", "61.2", "61.3",
