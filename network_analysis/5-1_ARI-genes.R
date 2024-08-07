@@ -445,3 +445,4 @@ for(i in names(enrichment_ARI_genes_overpatterned)){
   }
 }
 
+save.image(paste0(output_workenvironent, "ARI_genes.RData"))
