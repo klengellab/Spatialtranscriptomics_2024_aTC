@@ -88,7 +88,7 @@ custom.PCA(beta = t(batch_corrected_data), pd = metadata, plot.title = "PCA afte
 
 # WGCNA
 
-## paths
+## paths, you need to set this in some of the WGCNA functions the output are images in your allocated folder
 image_path <- output_path
 results_path <- output_path
 
