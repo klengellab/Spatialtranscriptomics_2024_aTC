@@ -5,6 +5,7 @@
 * Raw data: The stRNAseq fastq files can be accessed through GEO accession GSE243140
   
 **Guide through the data analysis scripts:**
+
 pipeline stages:
 1. preprocessing
 2. DEG_analysis
