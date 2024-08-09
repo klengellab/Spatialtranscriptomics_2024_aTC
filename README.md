@@ -1,4 +1,7 @@
-**Spatial analysis of transcriptional differences and connectivity after threat conditioning emphasize brain-wide gene expression changes and modulation of circuits**
+**Spatial transcriptomics reveals modulation of transcriptional networks across 
+brain regions after auditory threat conditioning**
+
+**Abstract**
 
 **Data availability:**
 
